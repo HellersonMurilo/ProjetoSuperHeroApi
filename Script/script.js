@@ -19,9 +19,16 @@ btnBuscar.addEventListener('click', () => {
 
         }
         try {
-            fetch(url, { method: "get" })
+            fetch(url, {
+                method: "GET",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin':'*',
+                    'Access-Control-Allow-Methods':'GET,POST,PATCH,OPTIONS'
+                }
+            })
                 .then(resultado => resultado.json())
-                .then(dados => showInfo(dados));
+                .then(dados => showInfo(dados.results));
 
             function showInfo(dados) {
                 console.log(dados);
@@ -33,5 +40,3 @@ btnBuscar.addEventListener('click', () => {
         alert("Informe o nome ou ID");
     }
 });
-
-
