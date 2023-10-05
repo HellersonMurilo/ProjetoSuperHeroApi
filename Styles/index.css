@@ -1,0 +1,14 @@
+body {
+    width: 320px;
+    height: 650px;
+    margin: 0 0 10px 0;
+    background: linear-gradient(135deg, #A60303 0%, #A60303 50%, #001980 51%, #001980 100%);
+    overflow: hidden;
+}
+
+.principal{
+    background-color: #0E023B;
+    width: 97.5vw;
+    height: 95vh;
+    margin: 1rem;
+}
