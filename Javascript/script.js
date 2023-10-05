@@ -23,8 +23,8 @@ btnBuscar.addEventListener('click', () => {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin':'*',
-                    'Access-Control-Allow-Methods':'GET,POST,PATCH,OPTIONS'
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET,POST,PATCH,OPTIONS'
                 }
             })
                 .then(resultado => resultado.json())
@@ -36,7 +36,7 @@ btnBuscar.addEventListener('click', () => {
         } catch (error) {
             console.log(error);
         }
-    } else {
-        alert("Informe o nome ou ID");
+    }else{
+        alert("Informe o ID ou nome")
     }
 });
