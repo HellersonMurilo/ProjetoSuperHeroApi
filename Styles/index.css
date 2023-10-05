@@ -1,14 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Roboto+Slab&family=Roboto:ital,wght@0,300;1,400&display=swap');
+
 body {
     width: 320px;
     height: 650px;
     margin: 0 0 10px 0;
     background: linear-gradient(135deg, #A60303 0%, #A60303 50%, #001980 51%, #001980 100%);
     overflow: hidden;
+    backdrop-filter: blur(2.5px)
 }
 
-.principal{
-    background-color: #0E023B;
+.principal {
+    border-radius: 5px;
+    background: linear-gradient(0deg, #1A2841 0%, #0B1322 100%, #080A0E 100%);
     width: 97.5vw;
     height: 95vh;
     margin: 1rem;
+}
+
+.navbar {
+    color: aliceblue;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+}
+
+.logo {
+    font-family: 'Bahiana', cursive;
+    color: #EC1F1D;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
