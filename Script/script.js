@@ -13,9 +13,10 @@ btnBuscar.addEventListener('click', () => {
         if (!isNaN(campoBusca)) {// Se for um número, é ID
             url = urlBase + campoBusca;
             console.log("era numero");
-        } else {// Se for uma string, é nome do herói
-            console.log("sou texto carai")
+        } else { // Se for uma string, é nome do herói
             url = urlBase + "search/" + campoBusca;
+            console.log(url)
+
         }
         try {
             fetch(url, { method: "get" })
