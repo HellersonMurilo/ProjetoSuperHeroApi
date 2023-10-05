@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Roboto+Slab&family=Roboto:ital,wght@0,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Noto+Serif:wght@700 & family= Open+Sans:wght@500 & family= Roboto+Slab:wght@700 & família= Roboto:wght@400;700 & display=swap');
 
 body {
     width: 320px;
@@ -22,10 +23,27 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
+    gap: 150px;
 }
 
-.info {
+.info ul {
+    font-family: 'Noto Serif', serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
     display: flex;
+    gap: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+}
+
+a:hover {
+    color: #ff0000;
+    transition: 1s;
 }
 
 .logo {
@@ -36,4 +54,27 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+/* Estilizando o campo de busca */
+#btnBuscar {
+    background-color: transparent;
+    border: #fff;
+    /* Adicione uma borda se desejar */
+    border-radius: 5px;
+    color: #000;
+    /* Defina a cor do texto para que seja visível */
+    padding: 5px;
+    /* Adicione preenchimento para manter o tamanho do botão */
+}
+
+#campoBusca {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    /* Adicione uma borda se desejar */
+    color: #fff;
+    /* Defina a cor do texto para que seja visível */
+    padding: 10px 20px;
+    /* Adicione preenchimento para manter o tamanho do elemento de entrada */
 }
