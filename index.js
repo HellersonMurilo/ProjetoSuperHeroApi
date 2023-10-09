@@ -11,7 +11,7 @@ btnBuscar.addEventListener('click', () => {
         }
     };
 
-    url = 'https://api.themoviedb.org/3/search/movie?query=' + campoBusca + '&inc   lude_adult=false&language=pt-BR&page=1'
+    url = 'https://api.themoviedb.org/3/search/movie?query=' + campoBusca + '&include_adult=false&language=pt-BR&page=1'
     console.log(url)
 
     fetch(url, options)
