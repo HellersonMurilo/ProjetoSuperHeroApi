@@ -24,7 +24,7 @@ btnBuscar.addEventListener('click', () => {
     }
 
     function showInfo(response) {
-        console.log(response.results[0].original_title)
+        console.log(response)
     }
 
 })
