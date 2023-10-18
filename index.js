@@ -1,6 +1,10 @@
-const btnBuscar = document.getElementById('btnBuscar')
+const btnBuscar = document.getElementById('botaoPesquisa')
 
-btnBuscar.addEventListener('click', () => {
+btnBuscar.addEventListener('click', () =>{
+    alert("Fui clicado")
+})
+
+/* btnBuscar.addEventListener('click', () => {
     var campoBusca = document.getElementById("campoBusca").value
     if (campoBusca != "") {
         let url;
@@ -28,3 +32,4 @@ btnBuscar.addEventListener('click', () => {
     }
 
 })
+ */
