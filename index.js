@@ -21,8 +21,20 @@ fetch(urlTendencias, options)
     .catch(err => console.error(err));
 
 //função que realizar o printar os resultados
+const containerPai = document.getElementById('pai')
+
 function showInfo(response) {
-    response.results.forEach(element => {
-        console.log(element.title)
+    response.results.slice(0, 10).forEach(element => {
+        console.log(element)
+        let cards = document.createElement('div')
+        cards.innerHTML = `
+        <div class="imagem" id="card1">
+            <img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt="">
+            <p>${element.title}</p>
+            <p>⭐${element.vote_average}</p>
+        </div>
+        `
+        containerPai.appendChild(cards)
+
     });
 }

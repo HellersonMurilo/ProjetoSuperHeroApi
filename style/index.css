@@ -120,6 +120,10 @@ nav {
 }
 
 #card1 {
-    width: 180px;
+    width: 200px;
     height: 250px;
+}
+
+.card1 p{
+    color: #FFF;
 }
