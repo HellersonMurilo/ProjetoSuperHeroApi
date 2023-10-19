@@ -75,6 +75,27 @@ nav {
     align-items: center;
 }
 
+.headerNetflix:hover:not(:hover) {
+    opacity: 0.8;
+}
+
+.headerNetflix img:hover {
+    transition: .55s;
+    scale: 1.1;
+}
+
+.primeiraImg {
+    z-index: 3;
+}
+
+.imgCentral {
+    z-index: 4;
+}
+
+.ultimaImg {
+    z-index: 3;
+}
+
 .corFundo {
     background-color: #00215064;
     width: 100%;
@@ -96,8 +117,8 @@ nav {
     margin-bottom: 20px;
 }
 
-.headerNetflix img {
-    z-index: 2;
+.corpoPrincipal {
+    z-index: 3;
 }
 
 .corpoPrincipal h2 {
@@ -107,7 +128,7 @@ nav {
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Slab', serif;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: -15px;
 }
 
 .pai {
@@ -124,4 +145,22 @@ nav {
     height: 250px;
     margin: 3rem 0;
     color: white;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+.celebridades h2 {
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    margin-top: 5rem;
+}
+
+.celebridadesPai {
+    display: grid;
+    gap: 35px;
+    margin-right: 50px;
+    margin-left: 50px;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }

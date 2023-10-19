@@ -6,7 +6,7 @@ const accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1OTZjY2YxMDUwYzIyYTc2MTI4Mm
 var urlTendencias = "https://api.themoviedb.org/3/trending/movie/day?language=pt-BR"
 
 //metodos para parametros no fetch
-const options = {
+var options = {
     method: 'GET',
     headers: {
         accept: 'application/json',
@@ -32,10 +32,37 @@ function showInfo(response) {
         <div class="imagem" id="card1">
             <img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt="">
             <p>${element.title}</p>
-            <p>⭐${formatoVoto}</p>
+            <p>⭐${formatoVoto}/10</p>
         </div>
         `
         containerPai.appendChild(cards)
 
     });
 }
+
+//Celebridades
+var urlCelebridades = "https://api.themoviedb.org/3/person/popular?api_key=" + apiKey
+
+//url foto das celebridades
+var urlImgCelebridades = "https://image.tmdb.org/t/p/w200"
+
+fetch(urlCelebridades, options)
+    .then(response => response.json())
+    .then(response => showCelebri(response))
+    .catch(err => console.error(err));
+
+function showCelebri(response) {
+    const cardCelebridades = document.getElementById('celebridadesPai')
+    response.results.slice(0, 10).forEach(element => {
+        console.log(element)
+        let cards = document.createElement('div')
+        cards.innerHTML = `
+        <div class="iconesCelebridades">
+            <img src="https://image.tmdb.org/t/p/w200${element.profile_path}" alt="">
+        </div>
+        `
+
+    cardCelebridades.appendChild(cards)
+    });
+}
+
