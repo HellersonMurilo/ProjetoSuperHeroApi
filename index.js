@@ -1,35 +1,26 @@
-const btnBuscar = document.getElementById('botaoPesquisa')
+//chaves de acesso
+const apiKey = "596ccf1050c22a761282ea036f9eb6d8"
+const accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1OTZjY2YxMDUwYzIyYTc2MTI4MmVhMDM2ZjllYjZkOCIsInN1YiI6IjY1MjIwOGYyYzUwYWQyMDBhZDg0ZjAzYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EszvEiolp95keL1Y62nHD2i9Ih41mHNDb49HGwedOdc"
 
-btnBuscar.addEventListener('click', () =>{
-    alert("Fui clicado")
-})
+//url do tendencias 
+var urlTendencias = "https://api.themoviedb.org/3/trending/movie/day?language=pt-BR"
 
-/* btnBuscar.addEventListener('click', () => {
-    var campoBusca = document.getElementById("campoBusca").value
-    if (campoBusca != "") {
-        let url;
-        const options = {
-            method: 'GET',
-            headers: {
-                accept: 'application/json',
-                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1OTZjY2YxMDUwYzIyYTc2MTI4MmVhMDM2ZjllYjZkOCIsInN1YiI6IjY1MjIwOGYyYzUwYWQyMDBhZDg0ZjAzYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EszvEiolp95keL1Y62nHD2i9Ih41mHNDb49HGwedOdc'
-            }
-        };
-
-        url = 'https://api.themoviedb.org/3/search/movie?query=' + campoBusca + '&include_adult=false&language=pt-BR&page=1'
-        console.log(url)
-
-        fetch(url, options)
-            .then(response => response.json())
-            .then(response => (showInfo(response)))
-            .catch(err => console.error(err));
-    }else{
-        alert('Nome filme não informado')
+//metodos para parametros no fetch
+const options = {
+    method: 'GET',
+    headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer' + accessToken
     }
+};
 
-    function showInfo(response) {
-        console.log(response)
-    }
+//fetch para obter os objetos da Url
+fetch(urlTendencias, options)
+    .then(response => response.json())
+    .then(response => showInfo(response))
+    .catch(err => console.error(err));
 
-})
- */
+//função que realizar o printar os resultados
+function showInfo(response) {
+    console.log(response)
+}
