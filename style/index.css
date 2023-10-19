@@ -111,19 +111,17 @@ nav {
 }
 
 .pai {
-    display: flex;
-    justify-content: center;
-    gap: 65px;
+    display: grid;
+    gap: 35px;
     margin-right: 50px;
     margin-left: 50px;
     flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 #card1 {
-    width: 200px;
+    width: 180;
     height: 250px;
-}
-
-.card1 p{
-    color: #FFF;
+    margin: 3rem 0;
+    color: white;
 }
