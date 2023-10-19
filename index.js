@@ -27,11 +27,12 @@ function showInfo(response) {
     response.results.slice(0, 10).forEach(element => {
         console.log(element)
         let cards = document.createElement('div')
+        const formatoVoto = element.vote_average.toFixed(1)
         cards.innerHTML = `
         <div class="imagem" id="card1">
             <img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt="">
             <p>${element.title}</p>
-            <p>⭐${element.vote_average}</p>
+            <p>⭐${formatoVoto}</p>
         </div>
         `
         containerPai.appendChild(cards)
