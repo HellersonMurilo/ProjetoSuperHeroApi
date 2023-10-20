@@ -146,7 +146,6 @@ nav {
     margin: 3rem 0;
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Slab', serif;
 }
 
 .celebridades h2 {
@@ -154,13 +153,21 @@ nav {
     justify-content: center;
     color: #FFF;
     margin-top: 5rem;
+
+    font-family: 'Roboto Slab', serif; 
+    margin-bottom: 2rem;
 }
 
 .celebridadesPai {
     display: grid;
     gap: 35px;
     margin-right: 50px;
-    margin-left: 50px;
+    margin-left: 125px;
     flex-wrap: wrap;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.celebridadesPai img{
+    border-radius: 200px;
+    justify-content: center;
 }

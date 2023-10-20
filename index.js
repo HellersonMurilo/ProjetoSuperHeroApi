@@ -25,7 +25,6 @@ const containerPai = document.getElementById('pai')
 
 function showInfo(response) {
     response.results.slice(0, 10).forEach(element => {
-        console.log(element)
         let cards = document.createElement('div')
         const formatoVoto = element.vote_average.toFixed(1)
         cards.innerHTML = `
@@ -40,29 +39,52 @@ function showInfo(response) {
     });
 }
 
-//Celebridades
-var urlCelebridades = "https://api.themoviedb.org/3/person/popular?api_key=" + apiKey
+// Celebridades
+var listaCelebridades = [90633, 18897, 2888, 19292, 53256];
 
-//url foto das celebridades
-var urlImgCelebridades = "https://image.tmdb.org/t/p/w200"
+// URL base para a API do TMDb
+var baseUrl = "https://api.themoviedb.org/3/";
 
-fetch(urlCelebridades, options)
-    .then(response => response.json())
-    .then(response => showCelebri(response))
-    .catch(err => console.error(err));
+// URL para as fotos das celebridades
+var urlImgCelebridades = "https://image.tmdb.org/t/p/w200";
 
-function showCelebri(response) {
-    const cardCelebridades = document.getElementById('celebridadesPai')
-    response.results.slice(0, 10).forEach(element => {
-        console.log(element)
-        let cards = document.createElement('div')
-        cards.innerHTML = `
-        <div class="iconesCelebridades">
-            <img src="https://image.tmdb.org/t/p/w200${element.profile_path}" alt="">
-        </div>
-        `
+//obtendo a div pai
+var cardCelebridades = document.getElementById('celebridadesPai');
 
-    cardCelebridades.appendChild(cards)
-    });
-}
+listaCelebridades.forEach(idCelebridade => {
+
+
+    var urlCelebridades = `${baseUrl}person/${idCelebridade}?api_key=${apiKey}&language=pt-BR`;
+    const options = {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1OTZjY2YxMDUwYzIyYTc2MTI8mmVhMDM2ZjllYjZkOCIsInN1YiI6IjY1MjIwOGYyYzUwYWQyMDBhZDg0ZjAzYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EszvEiolp95keL1Y62nHD2i9Ih41mHNDb49HGwedOdc'
+        }
+    };
+
+    var listaDados = []
+
+    fetch(urlCelebridades, options)
+        .then(response => response.json())
+        .then(resposta => showCelebri(resposta))
+        .catch(err => console.log(err));
+    function showCelebri(resposta) {
+        listaDados.push(resposta)
+
+        listaDados.forEach(element => {
+            let delicio = document.createElement('div')
+            delicio.innerHTML = `
+            <div class="cards">
+                <img src="${urlImgCelebridades + element.profile_path}" alt="" width="100" height="150">
+            </div>
+            `
+            cardCelebridades.appendChild(delicio)
+
+        });
+
+    }
+});
+
+
 
