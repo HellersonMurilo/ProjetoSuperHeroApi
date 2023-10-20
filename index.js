@@ -1,3 +1,5 @@
+import "./js/buscaFilme.js"
+
 //chaves de acesso
 const apiKey = "596ccf1050c22a761282ea036f9eb6d8"
 const accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1OTZjY2YxMDUwYzIyYTc2MTI4MmVhMDM2ZjllYjZkOCIsInN1YiI6IjY1MjIwOGYyYzUwYWQyMDBhZDg0ZjAzYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EszvEiolp95keL1Y62nHD2i9Ih41mHNDb49HGwedOdc"
@@ -77,6 +79,7 @@ listaCelebridades.forEach(idCelebridade => {
             delicio.innerHTML = `
             <div class="cards">
                 <img src="${urlImgCelebridades + element.profile_path}" alt="" width="100" height="150">
+                <p>${element.name}</p>
             </div>
             `
             cardCelebridades.appendChild(delicio)
