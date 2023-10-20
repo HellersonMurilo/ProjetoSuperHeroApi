@@ -1,4 +1,4 @@
-import "./js/buscaFilme.js"
+
 
 //chaves de acesso
 const apiKey = "596ccf1050c22a761282ea036f9eb6d8"

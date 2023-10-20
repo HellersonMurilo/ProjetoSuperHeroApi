@@ -161,7 +161,7 @@ nav {
     display: grid;
     gap: 35px;
     margin-right: 50px;
-    margin-left: 125px;
+    margin-left: 110px;
     flex-wrap: wrap;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
