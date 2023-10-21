@@ -26,12 +26,14 @@ fetch(urlTendencias, options)
 const containerPai = document.getElementById('pai')
 
 function showInfo(response) {
+    
     response.results.slice(0, 10).forEach(element => {
+
         let cards = document.createElement('div')
         const formatoVoto = element.vote_average.toFixed(1)
         cards.innerHTML = `
         <div class="imagem" id="card1">
-            <img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt="">
+            <a href="/movie.html?id=${element.id}" id="${element.id}"><img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt=""></a>
             <p>${element.title}</p>
             <p>⭐${formatoVoto}/10</p>
         </div>
@@ -80,6 +82,7 @@ listaCelebridades.forEach(idCelebridade => {
             <div class="cards">
                 <img src="${urlImgCelebridades + element.profile_path}" alt="" width="100" height="150">
                 <p>${element.name}</p>
+                
             </div>
             `
             cardCelebridades.appendChild(delicio)
