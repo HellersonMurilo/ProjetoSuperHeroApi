@@ -96,7 +96,17 @@ nav {
     font-family: 'Roboto', sans-serif;
 }
 
-.slide{
-    height: 28rem;
+.slides {
+    max-width: 100%;
+}
+
+.imgSlide{
+    display: flex;
     width: 100%;
+}
+
+.imgSlide img {
+    max-width: 100%; 
+    height: auto; 
+    z-index: 0;
 }
