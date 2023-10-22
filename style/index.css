@@ -25,7 +25,7 @@ nav {
 }
 
 .navegacao ul {
-    padding: 0;
+    padding-top: .3rem;
 }
 
 .navegacao li {
@@ -48,6 +48,7 @@ nav {
 
 .barraPesquisa {
     margin-top: 10px;
+    padding-top: .3rem;
 }
 
 #botaoPesquisa {
