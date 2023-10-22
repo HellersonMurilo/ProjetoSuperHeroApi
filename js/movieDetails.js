@@ -16,6 +16,7 @@ var options = {
 
 var urlFilms = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=pt-BR
 `
+console.log(urlFilms)
 
 //obtendo a div Pai para o appendChild
 var ludimilo = document.getElementById('amazonio')
@@ -28,23 +29,23 @@ fetch(urlFilms, options)
 
 function showInfoFilm(response) {
   console.log(response)
-    let infoFilms = document.createElement('div')
-    infoFilms.innerHTML = `
+  let infoFilms = document.createElement('div')
+  infoFilms.innerHTML = `
       <div class="corpoPrincipal" id="corpoPrincipal">
       <img src="https://image.tmdb.org/t/p/w300${response.poster_path}" alt="">
       <div class="infoCards" id="infoCards">
-          <h1>${response.belongs_to_collection.name}</h1>
+          <h1>${response.title}</h1>
           <span>${response.release_date}</span>
           <span>⚫</span>
-          <span>${response.runtime}minutos  </span>
-          <p>generoooo</p>
+          <span>${response.runtime}minutos</span>
+          <p>${response.genres.map(element => element.name).join(', ')}</p>        
           <i class="tagLine">'${response.tagline}'</i>
           <h6>SINOPSE</h6>
           <p>${response.overview}</p>
       </div>
   </div>
       `
-    
-      ludimilo.appendChild(infoFilms)
+
+  ludimilo.appendChild(infoFilms)
 }
 
