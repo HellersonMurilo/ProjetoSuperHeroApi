@@ -26,7 +26,7 @@ const containerPai = document.getElementById('pai')
 function showInfo(response) {
 
     response.results.slice(0, 10).forEach(element => {
-
+        
         let cards = document.createElement('div')
         const formatoVoto = element.vote_average.toFixed(1)
         cards.innerHTML = `

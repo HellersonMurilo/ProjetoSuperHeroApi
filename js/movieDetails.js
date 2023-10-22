@@ -42,6 +42,7 @@ function showInfoFilm(response) {
   var mesAtual = meses[mesNumero - 1]; // Obtém o mês atual por extenso
 
   let infoFilms = document.createElement('div')
+
   infoFilms.innerHTML = `
       <div class="corpoPrincipal" id="corpoPrincipal">
       <img src="https://image.tmdb.org/t/p/w300${response.poster_path}" alt="">
