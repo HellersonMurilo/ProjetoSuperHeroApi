@@ -17,18 +17,27 @@ var options = {
 
 var slides = document.getElementById('slides') //paizao dos slides
 
-//fecth novo
+//fecth slide
 fetch(urlPopularSeries, options)
     .then(response => response.json())
     .then(response => slide(response))
 
 function slide(response) {
-    response.results.forEach(element => {
-        console.log(element)
+    console.log(response)
+    response.results.slice(0,1).forEach(element => {
         let xoxotoSlide = document.createElement('div')
         xoxotoSlide.innerHTML = `
+        <div class="imgSlide">
+
         
+            <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/rkB4LyZHo1NHXFEDHl9vSD9r1lI.jpg" alt="">
+            <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/jsXKG9uppnPrhqFNhImllyCfLhl.jpg" alt="">
+            <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/hPea3Qy5Gd6z4kJLUruBbwAH8Rm.jpg" alt="">
+            
+        </div>
         `
+
+        slides.appendChild(xoxotoSlide);
     });
 }
 
