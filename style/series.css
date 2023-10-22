@@ -63,9 +63,14 @@ nav {
     height: 22px;
 }
 
-.container{
-    width: 100%;
+.container h2{
+    color: #FFF;
+    display: flex;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .cards{
@@ -81,4 +86,17 @@ nav {
     color: #fff;
     margin: 0;
     padding: 0;
+}
+
+#post1{
+    width: 180;
+    height: 250px;
+    margin: 3rem 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.slide{
+    height: 28rem;
+    width: 100%;
 }

@@ -14,6 +14,26 @@ var options = {
     }
 };
 
+
+var slides = document.getElementById('slides') //paizao dos slides
+
+//fecth novo
+fetch(urlPopularSeries, options)
+    .then(response => response.json())
+    .then(response => slide(response))
+
+function slide(response) {
+    response.results.forEach(element => {
+        console.log(element)
+        let xoxotoSlide = document.createElement('div')
+        xoxotoSlide.innerHTML = `
+        
+        `
+    });
+}
+
+
+//fecth novo
 fetch(urlPopularSeries, options)
     .then(response => response.json())
     .then(response => showData(response))
@@ -21,12 +41,10 @@ fetch(urlPopularSeries, options)
 const divPai = document.getElementById("paiPopular")
 
 function showData(response) {
-
-    console.log(response)
     response.results.forEach(element => {
         let postSerie = document.createElement('div')
         postSerie.innerHTML = `
-        <div class="postSerie">
+        <div class="postSerie" id="post1">
             <img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt="">
             <p>${element.name}</p>
             <p>⭐${element.vote_average}</p>
