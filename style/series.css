@@ -68,6 +68,11 @@ nav {
     justify-content: center;
 }
 
+.title{
+    color: #fff;
+  
+}
+
 .cards{
     display: grid;
     gap: 35px;
