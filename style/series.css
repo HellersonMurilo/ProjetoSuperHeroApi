@@ -62,3 +62,23 @@ nav {
     width: 213.4px;
     height: 22px;
 }
+
+.container{
+    width: 100%;
+    justify-content: center;
+}
+
+.cards{
+    display: grid;
+    gap: 35px;
+    margin-right: 50px;
+    margin-left: 50px;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.postSerie{
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
