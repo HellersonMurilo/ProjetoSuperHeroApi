@@ -28,25 +28,39 @@
         </div>
     </nav>
     <header>
-        <div class="slides" id="slides">
+        <div class="carrossel">
 
-            <input type="radio" name="back">
-            <input type="radio" name="back">
-            <input type="radio" name="back">
+            <div class="slides" id="slides">
 
-            <div class="imgSlide">
-                <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/rkB4LyZHo1NHXFEDHl9vSD9r1lI.jpg" alt="">
-            </div>
+                <input type="radio" name="backdrop_path" id="slide1">
+                <input type="radio" name="backdrop_path" id="slide2">
+                <input type="radio" name="backdrop_path" id="slide3">
+    
+                <div class="imgSlide check">
+                    <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/rkB4LyZHo1NHXFEDHl9vSD9r1lI.jpg" alt="">
+                    <div class="titulo"><h1>Arcane</h1></div>
+                </div>
+    
+                <div class="imgSlide">
+                    <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/jsXKG9uppnPrhqFNhImllyCfLhl.jpg" alt="">
+                    <div class="titulo"><h1>Arcane</h1></div>
+                </div>
+    
+                <div class="imgSlide">
+                    <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/hPea3Qy5Gd6z4kJLUruBbwAH8Rm.jpg" alt="">
+                    <div class="titulo"><h1>Arcane</h1></div>
+                </div>
 
-            <div class="imgSlide">
-                <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/jsXKG9uppnPrhqFNhImllyCfLhl.jpg" alt="">
-            </div>
-
-            <div class="imgSlide">
-                <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/hPea3Qy5Gd6z4kJLUruBbwAH8Rm.jpg" alt="">
+                <div class="buttons">
+                    <label class="btn1" for="slide1"></label>
+                    <label class="btn2" for="slide2"></label>
+                    <label class="btn3" for="slide3"></label>
+                </div>
+    
             </div>
             
         </div>
+       
     </header>
     <section class="container">
         <h2>Séries Populares 🔥</h2>
@@ -55,5 +69,6 @@
     </section>
 
     <script src="/js/series.js"></script>
+    <script src="js/movieDetails.js"></script>
 </body>
 </html>

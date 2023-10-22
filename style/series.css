@@ -96,17 +96,74 @@ nav {
     font-family: 'Roboto', sans-serif;
 }
 
+.carrossel{
+
+    width: 100%;
+    overflow: hidden;
+}
+
 .slides {
-    max-width: 100%;
+    width: 300%;
+    display: flex;
 }
 
 .imgSlide{
+ 
     display: flex;
-    width: 100%;
+    width: 33.33%;
+/*     transition: .6s; */
 }
 
 .imgSlide img {
     max-width: 100%; 
     height: auto; 
-    z-index: 0;
+}
+
+.titulo{
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 3px;
+    margin-top: 18rem;
+    padding: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#slide1:checked ~ .check{
+
+    margin-left: 0;
+}
+
+#slide2:checked ~ .check{
+
+    margin-left: -33.33%;
+}
+
+#slide3:checked ~ .check{
+
+    margin-left: -66.66%;
+}
+
+.buttons{
+    position: absolute;
+    margin-top: 20px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+    margin-top: 385px;
+}
+
+.btn1, .btn2, .btn3{
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 90px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+input{
+    display: none;
 }
