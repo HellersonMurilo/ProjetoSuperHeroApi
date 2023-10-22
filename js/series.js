@@ -18,7 +18,7 @@ var options = {
 var slides = document.getElementById('slides') //paizao dos slides
 
 //fecth slide
-fetch(urlPopularSeries, options)
+/* fetch(urlPopularSeries, options)
     .then(response => response.json())
     .then(response => slide(response))
 
@@ -39,7 +39,7 @@ function slide(response) {
 
         slides.appendChild(xoxotoSlide);
     });
-}
+} */
 
 
 //fecth novo
@@ -54,7 +54,7 @@ function showData(response) {
         let postSerie = document.createElement('div')
         postSerie.innerHTML = `
         <div class="postSerie" id="post1">
-            <img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt="">
+        <a href="/serieDetails.html?id=${element.id}" id="${element.id}"><img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt=""></a>
             <p>${element.name}</p>
             <p>⭐${element.vote_average}</p>
         </div>

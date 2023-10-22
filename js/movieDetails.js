@@ -33,7 +33,7 @@ function showInfoFilm(response) {
       <div class="corpoPrincipal" id="corpoPrincipal">
       <img src="https://image.tmdb.org/t/p/w300${response.poster_path}" alt="">
       <div class="infoCards" id="infoCards">
-          <h1>${response.belongs_to_collection.name}</h1>
+          <h1>${response.title}</h1>
           <span>${response.release_date}</span>
           <span>⚫</span>
           <span>${response.runtime}minutos  </span>
