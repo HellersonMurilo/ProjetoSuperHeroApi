@@ -28,17 +28,27 @@ fetch(urlFilms, options)
   .catch(err => console.log(err));
 
 function showInfoFilm(response) {
-  console.log(response)
+  //obtendo a data
+  var meses = [
+    "Jan", "Fev", "Mar", "Abr", "Mai", "Jun",
+    "Jul", "Ago", "Set", "Out", "Nov", "Dez"
+  ];
+
+  var data = new Date();
+  var dia = response.release_date.split('-'); // Obtém o dia do mês criando uma lista
+  var diaNumero = dia[2]; // Obtém o dia
+  var mesNumero = dia[1]; // Obtém o mês
+  var ano = dia[0]; // Obtém o ano
+  var mesAtual = meses[mesNumero - 1]; // Obtém o mês atual por extenso
+
   let infoFilms = document.createElement('div')
   infoFilms.innerHTML = `
       <div class="corpoPrincipal" id="corpoPrincipal">
       <img src="https://image.tmdb.org/t/p/w300${response.poster_path}" alt="">
       <div class="infoCards" id="infoCards">
           <h1>${response.title}</h1>
-          <span>${response.release_date}</span>
-          <span>⚫</span>
-          <span>${response.runtime}minutos</span>
-          <p>${response.genres.map(element => element.name).join(', ')}</p>        
+          <span>${diaNumero + " " + mesAtual + " " + ano} ⚪ ${response.runtime}minutos</span>
+          <p class="generoInfo">${response.genres.map(element => element.name).join(', ')}</p>        
           <i class="tagLine">'${response.tagline}'</i>
           <h6>SINOPSE</h6>
           <p>${response.overview}</p>

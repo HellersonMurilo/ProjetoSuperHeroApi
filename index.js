@@ -80,7 +80,6 @@ listaCelebridades.forEach(idCelebridade => {
             <div class="cards">
                 <img src="${urlImgCelebridades + element.profile_path}" alt="" width="100" height="150">
                 <p>${element.name}</p>
-                
             </div>
             `
             cardCelebridades.appendChild(delicio)

@@ -33,10 +33,10 @@
 #infoCards span,
 p {
     margin: .5rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: normal;
 }
 
@@ -52,4 +52,16 @@ p {
 .tagLine{
     font-family: 'Roboto', sans-serif;
     font-style: italic;
+    line-height: normal;
+    margin: .5rem;
+    display: flex;
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+}
+
+.generoInfo{
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
 }
