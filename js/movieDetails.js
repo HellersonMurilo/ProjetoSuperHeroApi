@@ -16,6 +16,7 @@ var options = {
 
 var urlFilms = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=pt-BR
 `
+
 console.log(urlFilms)
 
 //obtendo a div Pai para o appendChild
