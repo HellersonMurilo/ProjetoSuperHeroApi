@@ -1,5 +1,3 @@
-
-
 //chaves de acesso
 const apiKey = "596ccf1050c22a761282ea036f9eb6d8"
 const accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1OTZjY2YxMDUwYzIyYTc2MTI4MmVhMDM2ZjllYjZkOCIsInN1YiI6IjY1MjIwOGYyYzUwYWQyMDBhZDg0ZjAzYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EszvEiolp95keL1Y62nHD2i9Ih41mHNDb49HGwedOdc"
@@ -26,7 +24,7 @@ fetch(urlTendencias, options)
 const containerPai = document.getElementById('pai')
 
 function showInfo(response) {
-    
+
     response.results.slice(0, 10).forEach(element => {
 
         let cards = document.createElement('div')
@@ -91,6 +89,5 @@ listaCelebridades.forEach(idCelebridade => {
 
     }
 });
-
 
 
