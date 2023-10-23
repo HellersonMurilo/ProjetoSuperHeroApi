@@ -14,8 +14,26 @@ var options = {
     }
 };
 
+//Automatizando os slides
+let contador = 1;
 
-var slides = document.getElementById('slides') //paizao dos slides
+document.getElementById('slide1').checked = true;
+
+setInterval(function () {
+    nextSlide();
+}, 4000)
+
+function nextSlide() {
+    contador++;
+    if (contador>3) {
+        contador = 1;
+    }
+
+    document.getElementById('slide'+contador).checked = true;
+}
+
+
+/* var slides = document.getElementById('slides')  *///paizao dos slides
 
 //fecth slide
 /* fetch(urlPopularSeries, options)

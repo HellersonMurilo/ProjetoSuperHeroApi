@@ -31,7 +31,7 @@ function showInfoFilm(response) {
       <img src="https://image.tmdb.org/t/p/w300${response.poster_path}" alt="">
       <div class="infoCards" id="infoCards">
           <h1>${response.name}</h1>
-          <span>N° de Episódios${response.number_of_episodes} </span>
+          <span>Episódios: ${response.number_of_episodes} </span>
           <span>⚫</span>
           <span>Temporadas: ${response.number_of_seasons}</span>
           <p>generoooo</p>
