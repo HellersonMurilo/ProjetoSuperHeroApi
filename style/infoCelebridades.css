@@ -21,7 +21,6 @@
 }
 
 .matoAtlatico{
-
     margin: 5px;
     padding-left: 5rem;
     gap: 10px;
@@ -34,6 +33,10 @@
 .matoAtlatico img:hover {
     transition: .55s;
     scale: 1.1;
+}
+
+.matoAtlatico img{
+    border-radius: 5px;
 }
 
 .matoAtlatico p{
