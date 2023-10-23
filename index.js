@@ -31,7 +31,7 @@ function showInfo(response) {
         const formatoVoto = element.vote_average.toFixed(1)
         cards.innerHTML = `
         <div class="imagem" id="card1">
-            <a href="/movie.html?id=${element.id}" id="${element.id}"><img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt=""></a>
+            <a href="/movie.html?id=${element.id}" id="${element.id}"><img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt="" loading="eager"></a>
             <p>${element.title}</p>
             <p>⭐${formatoVoto}/10</p>
         </div>
@@ -78,7 +78,7 @@ listaCelebridades.forEach(idCelebridade => {
             let delicio = document.createElement('div')
             delicio.innerHTML = `
             <div class="cards">
-            <a href="/infoCelebridades.html?id=${element.id}"><img src="${urlImgCelebridades + element.profile_path}" alt="" width="100" height="150"></a>
+            <a href="/infoCelebridades.html?id=${element.id}"><img src="${urlImgCelebridades + element.profile_path}" alt="" width="100" height="150" loading="eager"></a>
                 <p>${element.name}</p>
             </div>
             `

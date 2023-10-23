@@ -28,7 +28,7 @@ function showInfoFilm(response) {
      let infoSeries = document.createElement('div')
     infoSeries.innerHTML = `
       <div class="corpoPrincipal" id="corpoPrincipal">
-      <img src="https://image.tmdb.org/t/p/w300${response.poster_path}" alt="">
+      <img src="https://image.tmdb.org/t/p/w300${response.poster_path}" alt="" loading="eager">
       <div class="infoCards" id="infoCards">
           <h1>${response.name}</h1>
           <span>N° de Episódios: ${response.number_of_episodes} ⚪ Temporadas: ${response.number_of_seasons}</span>

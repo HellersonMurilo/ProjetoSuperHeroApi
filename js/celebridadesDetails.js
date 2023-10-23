@@ -78,7 +78,7 @@ function showFilmeCelebridades(response) {
         let info = document.createElement('div');
         info.innerHTML = `
         <div class="infoFilmesCelebridades">
-            <a href="/movie.html?id=${element.id}"><img src="https://image.tmdb.org/t/p/w200${element.backdrop_path == null ? "": element.backdrop_path}" alt=""></a>
+            <a href="/movie.html?id=${element.id}"><img src="https://image.tmdb.org/t/p/w200${element.backdrop_path == null ? "": element.backdrop_path}" alt="" loading="eager"></a>
             <p>${element.backdrop_path == null ? "": element.title}</p>
         </div>
         `

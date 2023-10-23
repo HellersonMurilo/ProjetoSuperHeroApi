@@ -46,7 +46,7 @@ function showInfoFilm(response) {
 
   infoFilms.innerHTML = `
       <div class="corpoPrincipal" id="corpoPrincipal">
-      <img src="https://image.tmdb.org/t/p/w300${response.poster_path}" alt="">
+      <img src="https://image.tmdb.org/t/p/w300${response.poster_path}" alt="" loading="eager">
       <div class="infoCards" id="infoCards">
           <h1>${response.title}</h1>
           <span>${diaNumero + " " + mesAtual + " " + ano} ⚪ ${response.runtime}minutos</span>
