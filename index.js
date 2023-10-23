@@ -26,7 +26,7 @@ const containerPai = document.getElementById('pai')
 function showInfo(response) {
 
     response.results.slice(0, 10).forEach(element => {
-        
+
         let cards = document.createElement('div')
         const formatoVoto = element.vote_average.toFixed(1)
         cards.innerHTML = `
@@ -37,6 +37,31 @@ function showInfo(response) {
         </div>
         `
         containerPai.appendChild(cards)
+
+        let botaoVerMais = document.getElementById('botaoVerMais')
+
+        botaoVerMais.addEventListener('click', () => {
+            console.log(response.results)
+            const startIndex = 10;
+            const endIndex = 11;
+            const resultsToDisplay = response.results.slice(10, 19);
+        
+            resultsToDisplay.forEach(element => {
+                console.log(element)
+                let cards = document.createElement('div');
+                const formatoVoto = element.vote_average.toFixed(1);
+                cards.innerHTML = `
+                    <div class="imagem" id="card1">
+                        <a href="/movie.html?id=${element.id}" id="${element.id}"><img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt="" loading="eager"></a>
+                        <p>${element.title}</p>
+                        <p>⭐${formatoVoto}/10</p>
+                    </div>
+                `;
+                containerPai.appendChild(cards);
+            });
+        });
+        
+
 
     });
 }
