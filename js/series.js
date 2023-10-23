@@ -47,7 +47,7 @@ function showData(response) {
         <div class="postSerie" id="post1">
         <a href="/infoSerie.html?id=${element.id}" id="${element.id}"><img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt="" loading="eager"></a>
             <p>${element.name}</p>
-            <p>⭐${element.vote_average}/10</p>
+            <p>⭐${element.vote_average}</p>
         </div>
         `
         divPai.appendChild(postSerie)
