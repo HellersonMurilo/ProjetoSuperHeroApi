@@ -14,33 +14,23 @@ var options = {
     }
 };
 
+//Automatizando os slides
+let contador = 1;
 
-var slides = document.getElementById('slides') //paizao dos slides
+document.getElementById('slide1').checked = true;
 
-//fecth slide
-/* fetch(urlPopularSeries, options)
-    .then(response => response.json())
-    .then(response => slide(response))
+setInterval(function () {
+    nextSlide();
+}, 4000)
 
-function slide(response) {
-    console.log(response)
-    response.results.slice(0,1).forEach(element => {
-        let xoxotoSlide = document.createElement('div')
-        xoxotoSlide.innerHTML = `
-        <div class="imgSlide">
+function nextSlide() {
+    contador++;
+    if (contador>3) {
+        contador = 1;
+    }
 
-        
-            <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/rkB4LyZHo1NHXFEDHl9vSD9r1lI.jpg" alt="">
-            <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/jsXKG9uppnPrhqFNhImllyCfLhl.jpg" alt="">
-            <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/hPea3Qy5Gd6z4kJLUruBbwAH8Rm.jpg" alt="">
-            
-        </div>
-        `
-
-        slides.appendChild(xoxotoSlide);
-    });
-} */
-
+    document.getElementById('slide'+contador).checked = true;
+}
 
 //fecth novo
 fetch(urlPopularSeries, options)
@@ -50,6 +40,7 @@ fetch(urlPopularSeries, options)
 const divPai = document.getElementById("paiPopular")
 
 function showData(response) {
+    console.log(response)
     response.results.forEach(element => {
         let postSerie = document.createElement('div')
         postSerie.innerHTML = `

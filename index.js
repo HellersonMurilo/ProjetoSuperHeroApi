@@ -78,7 +78,7 @@ listaCelebridades.forEach(idCelebridade => {
             let delicio = document.createElement('div')
             delicio.innerHTML = `
             <div class="cards">
-                <img src="${urlImgCelebridades + element.profile_path}" alt="" width="100" height="150">
+            <a href="/infoCelebridades.html?id=${element.id}"><img src="${urlImgCelebridades + element.profile_path}" alt="" width="100" height="150"></a>
                 <p>${element.name}</p>
             </div>
             `

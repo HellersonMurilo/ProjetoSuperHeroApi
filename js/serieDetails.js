@@ -13,6 +13,7 @@ var options = {
 };
 
 var urlSerie = `https://api.themoviedb.org/3/tv/${id}?api_key=${apiKey}&language=pt-BR`
+console.log(urlSerie)
 
 //obtendo a div Pai para o appendChild
 var ludimilo = document.getElementById('amazonio')
@@ -24,15 +25,14 @@ fetch(urlSerie, options)
   .catch(err => console.log(err));
 
 function showInfoFilm(response) {
-  console.log(response)
-     let infoFilms = document.createElement('div')
-    infoFilms.innerHTML = `
+     let infoSeries = document.createElement('div')
+    infoSeries.innerHTML = `
       <div class="corpoPrincipal" id="corpoPrincipal">
       <img src="https://image.tmdb.org/t/p/w300${response.poster_path}" alt="">
       <div class="infoCards" id="infoCards">
           <h1>${response.name}</h1>
           <span>N° de Episódios: ${response.number_of_episodes} ⚪ Temporadas: ${response.number_of_seasons}</span>
-          <p>generoooo</p>
+          <p>${response.genres.map(element => element.name).join(', ')}</p>
           <i class="tagLine">'${response.tagline}'</i>
           <h6>SINOPSE</h6>
           <p>${response.overview}</p>
@@ -40,6 +40,6 @@ function showInfoFilm(response) {
   </div>
       `
     
-      ludimilo.appendChild(infoFilms)
+      ludimilo.appendChild(infoSeries)
 }
 
