@@ -69,8 +69,8 @@ nav {
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Slab', serif;
-    margin-top: 20px;
-    margin-bottom: 15px;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
     padding: 10px;
     font-size: 18px;
 }
@@ -98,7 +98,6 @@ nav {
 }
 
 .carrossel{
-
     width: 100%;
     overflow: hidden;
 }
