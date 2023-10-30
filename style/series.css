@@ -71,6 +71,8 @@ nav {
     font-family: 'Roboto Slab', serif;
     margin-top: 20px;
     margin-bottom: 15px;
+    padding: 10px;
+    font-size: 18px;
 }
 
 .cards{
@@ -90,10 +92,9 @@ nav {
 
 #post1{
     width: 180;
-    height: 250px;
-    margin: 3rem 0;
     color: white;
     font-family: 'Roboto', sans-serif;
+    margin-top: 15px;
 }
 
 .carrossel{
