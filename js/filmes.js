@@ -43,7 +43,6 @@ fetch(urlFilmesPopular, options)
 const paiFilmesPopular = document.getElementById("paiFilmesPopular")
 
 function showPopular(result) {
-    console.log(result)
     result.results.forEach(element => {
         let postFilme = document.createElement('div')
         postFilme.innerHTML = `
@@ -67,7 +66,6 @@ fetch(urlFilmesTopRated, options)
 const paiFilmestop = document.getElementById("paiFilmesTop")
 
 function showTop(response) {
-    console.log(response)
     response.results.forEach(element => {
         let cardFilme = document.createElement('div')
         cardFilme.innerHTML = `

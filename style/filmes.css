@@ -22,6 +22,16 @@ nav {
     justify-content: space-around;
 }
 
+.topFilmes{
+        color: #FFF;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    margin-top: 5rem;
+    margin-bottom: 15px;
+}
+
 .navegacao ul {
     padding: 0;
 }
@@ -63,7 +73,7 @@ nav {
     height: 22px;
 }
 
-.container h2{
+.container h2:first-child {
     color: #FFF;
     display: flex;
     justify-content: center;
@@ -73,7 +83,7 @@ nav {
     margin-bottom: 15px;
 }
 
-.cards{
+.cards {
     display: grid;
     gap: 50px;
     margin-right: 50px;
@@ -82,20 +92,20 @@ nav {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.cardFilme{
+.cardFilme {
     color: #fff;
     margin: 0;
     padding: 0;
 }
 
-#card1{
+#card1 {
     width: 180;
     color: white;
     font-family: 'Roboto', sans-serif;
     margin-top: 15px;
 }
 
-.carrossel{
+.carrossel {
     width: 100%;
     overflow: hidden;
 }
@@ -105,8 +115,8 @@ nav {
     display: flex;
 }
 
-.imgSlide{
- 
+.imgSlide {
+
     display: flex;
     width: 33.33%;
     position: relative;
@@ -114,11 +124,11 @@ nav {
 }
 
 .imgSlide img {
-    max-width: 100%; 
-    height: auto; 
+    max-width: 100%;
+    height: auto;
 }
 
-.imgSlide h1{
+.imgSlide h1 {
     position: absolute;
     color: #fff;
     font-weight: bold;
@@ -130,7 +140,7 @@ nav {
     font-family: 'Roboto', sans-serif;
 }
 
-.imgSlide p{
+.imgSlide p {
     position: absolute;
     color: #fff;
     font-weight: lighter;
@@ -142,37 +152,37 @@ nav {
     font-family: 'Roboto', sans-serif;
 }
 
-#slide1:checked ~ .check{
+#slide1:checked~.check {
 
     margin-left: 0;
 }
 
-#slide2:checked ~ .check{
+#slide2:checked~.check {
 
     margin-left: -33.33%;
 }
 
-#slide3:checked ~ .check{
+#slide3:checked~.check {
 
     margin-left: -66.66%;
 }
 
-#slide1:checked ~ .buttons .btn1{
+#slide1:checked~.buttons .btn1 {
 
     background-color: #121C30;
 }
 
-#slide2:checked ~ .buttons .btn2{
+#slide2:checked~.buttons .btn2 {
 
     background-color: #121C30;
 }
 
-#slide3:checked ~ .buttons .btn3{
+#slide3:checked~.buttons .btn3 {
 
     background-color: #121C30;
 }
 
-.buttons{
+.buttons {
     position: absolute;
     margin-top: 20px;
     display: flex;
@@ -182,7 +192,9 @@ nav {
     margin-top: 385px;
 }
 
-.btn1, .btn2, .btn3{
+.btn1,
+.btn2,
+.btn3 {
     width: 15px;
     height: 15px;
     background-color: #fff;
@@ -191,6 +203,6 @@ nav {
     margin: 5px;
 }
 
-input{
+input {
     display: none;
 }
