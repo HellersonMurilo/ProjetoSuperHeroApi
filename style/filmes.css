@@ -67,16 +67,15 @@ nav {
     color: #FFF;
     display: flex;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Slab', serif;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-    padding: 10px;
-    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .cards{
     display: grid;
-    gap: 35px;
+    gap: 50px;
     margin-right: 50px;
     margin-left: 50px;
     flex-wrap: wrap;

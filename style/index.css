@@ -194,3 +194,18 @@ nav {
     font-family: 'Roboto Slab', serif; 
 }
 
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+    width: 15px; /* Largura da barra de rolagem */
+  }
+  
+  /* Estiliza o polegar da barra de rolagem (a parte que você arrasta) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #FF5733; /* Cor de fundo do polegar */
+    border-radius: 5px; /* Raio das bordas do polegar */
+  }
+  
+  /* Estiliza a barra de rolagem na horizontal (opcional) */
+  ::-webkit-scrollbar-track {
+    background-color: #121C30; /* Cor de fundo da barra de rolagem */
+  }
