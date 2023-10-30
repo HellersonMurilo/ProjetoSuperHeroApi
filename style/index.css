@@ -194,14 +194,3 @@ nav {
     font-family: 'Roboto Slab', serif; 
 }
 
-#botaoVerMais{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 4rem;
-    background: transparent;
-    font-family: 'Roboto Slab', serif; 
-    color: #FFF;
-    border: 1px solid #121C30;
-    cursor: pointer;
-}

@@ -50,7 +50,7 @@ function showPopular(result) {
         <div class="cardFilme" id="card1">
         
             <a href="/movie.html?id=${element.id}" id="${element.id}"><img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt=""></a>
-            <p>${element.original_title}</p>
+            <p>${element.title}</p>
             <p>⭐${element.vote_average}</p>
         </div>
         `
@@ -73,7 +73,7 @@ function showTop(response) {
         cardFilme.innerHTML = `
         <div class="cardFilme" id="card1">
             <a href="/movie.html?id=${element.id}" id="${element.id}"><img src="https://image.tmdb.org/t/p/w200${element.poster_path}" alt=""></a>
-            <p>${element.original_title}</p>
+            <p>${element.title}</p>
             <p>⭐${element.vote_average}</p>
         </div>
         `
