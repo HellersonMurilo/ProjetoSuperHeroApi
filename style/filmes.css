@@ -84,13 +84,13 @@ nav {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.postSerie{
+.cardFilme{
     color: #fff;
     margin: 0;
     padding: 0;
 }
 
-#post1{
+#card1{
     width: 180;
     color: white;
     font-family: 'Roboto', sans-serif;

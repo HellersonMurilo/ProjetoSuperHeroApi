@@ -32,6 +32,11 @@ function nextSlide() {
     document.getElementById('slide'+contador).checked = true;
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> giovanna
 //fecth novo
 fetch(urlPopularSeries, options)
     .then(response => response.json())

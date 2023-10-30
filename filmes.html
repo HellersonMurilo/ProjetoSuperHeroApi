@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfoFilms</title>
     <link rel="shortcut icon" href="/Img/pipoca.png" type="image/x-icon">
     <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/series.css">
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/filmes.css">
 </head>
-
 <body>
     <nav>
         <div class="logo">
@@ -20,8 +17,8 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discovery.html">Discover</a></li>
-                <li><a href="filmes.html">Filmes</a></li>
-                <li><a href="">Série</a></li>
+                <li><a href="">Filmes</a></li>
+                <li><a href="series.html">Série</a></li>
                 <li><a href="aboutUs.html">Sobre Nós</a></li>
             </ul>
         </div>
@@ -38,23 +35,23 @@
                 <input type="radio" name="backdrop_path" id="slide1">
                 <input type="radio" name="backdrop_path" id="slide2">
                 <input type="radio" name="backdrop_path" id="slide3">
-
+    
                 <div class="imgSlide check">
-                    <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/rkB4LyZHo1NHXFEDHl9vSD9r1lI.jpg" alt="" loading="eager">
-                    <h1>Arcane</h1>
-                    <p>Animação, Drama, Sci-Fi & Fantasy, Action & Adventure</p>
+                    <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)//2u7zbn8EudG6kLlBzUYqP8RyFU4.jpg" alt="">
+                    <h1>Senhor dos Anéis</h1>
+                    <p>Aventura, Fantasia, Ação</p>
+                </div>
+    
+                <div class="imgSlide">
+                    <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)//t5zCBSB5xMDKcDqe91qahCOUYVV.jpg" alt="">
+                    <h1>Five Nights at Freddy's</h1>
+                    <p>Terror</p>
                 </div>
 
                 <div class="imgSlide">
-                    <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/jsXKG9uppnPrhqFNhImllyCfLhl.jpg" alt="" loading="eager">
-                    <h1>My Hero Academy</h1>
-                    <p>Action & Adventure, Animação</p>
-                </div>
-
-                <div class="imgSlide">
-                    <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/hPea3Qy5Gd6z4kJLUruBbwAH8Rm.jpg" alt="" loading="eager">
-                    <h1>Better Call Saul</h1>
-                    <p>Crime, Drama</p>
+                    <img src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)//rrucFNW1qOgSPL4n2Fy6CdpBDEY.jpg" alt="">
+                    <h1>Konferensen</h1>
+                    <p>Terror, Comédia, Thriller</p>
                 </div>
 
                 <div class="buttons">
@@ -62,21 +59,22 @@
                     <label class="btn2" for="slide2"></label>
                     <label class="btn3" for="slide3"></label>
                 </div>
-
-            </div>
-
-        </div>
-
+    
+            </div><!-- /slides -->
+            
+        </div><!-- /carrossel -->
+       
     </header>
     <section class="container">
-        <h2>Séries Populares 🔥</h2>
-        <div class="cards" id="paiPopular">
-            
+        <h2>Filmes Populares 🔥</h2>
+        <div class="cards" id="paiFilmesPopular">
         </div>
+
+        <h2>Filmes Mais Bem Avaliados 🔥</h2>
+        <div class="cards" id="paiFilmesTop">
+        </div>    
     </section>
 
-    <script src="/js/series.js"></script>
-    <script src="js/serieDetails.js"></script>
+    <script src="./js/filmes.js"></script>
 </body>
-
 </html>
