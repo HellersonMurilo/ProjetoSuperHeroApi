@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfoFilms</title>
-    <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/index.css">
     <link rel="shortcut icon" href="/Img/pipoca.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/discovery.css">
+
 
 </head>
 
@@ -28,15 +30,24 @@
         <div class="barraPesquisa">
             <button id="botaoPesquisa">🔎</button>
             <input type="text" name="" id="campoBusca">
-        </div>
+        </div>  
     </nav>
-    <header>
-        <div class="headerNetflix">
-           <p>Descubra a magia do cinema!! <br> Explore um universo de filmes e séries.</p>
-        </div>
-    </header>
 
-    <script src="index.js" defer></script>
+    <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel" >
+        <div class="carousel-inner" id="pai" >
+        </div>
+        <button id="prev" class="carousel-control-prev" type="button" data-bs-target="#meuCarrossel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button id="next" class="carousel-control-next" type="button" data-bs-target="#meuCarrossel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <script src="discovery.js" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
