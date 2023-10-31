@@ -108,3 +108,10 @@ nav {
     max-width: 360px;
     height: 180px;
   }
+
+  body{
+    height: 90vh;
+    overflow: hidden;
+  }
+
+  
