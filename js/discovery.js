@@ -27,6 +27,7 @@ function showSlide() {
     const img = movie.backdrop_path;
     const genre = movie.genre_ids[0];
     const overView = movie.overview;
+    const genresString = getGenresString(movie.genre_ids);
     console.log(movie)
 
     let cards = document.createElement('div');
@@ -34,7 +35,7 @@ function showSlide() {
     cards.innerHTML = `
       <div class="carousel-item active" id="card1" >
         <h1 class="banner-title">${title}</h1>
-        <p>${genre}</p>
+        <p>${genresString}</p>
         <h2 class="banner-descricao">${overView}</h2>
       </div>
     `;
@@ -62,16 +63,30 @@ avancar.addEventListener('click', () => {
   }
 });
 
+const genreMap = {
+  28: "Ação",
+  12: "Aventura",
+  16: "Animação",
+  35: "Comédia",
+  80: "Crime",
+  99: "Documentário",
+  18: "Drama",
+  10751: "Família",
+  14: "Fantasia",
+  36: "História",
+  27: "Terror",
+  10402: "Música",
+  9648: "Romance",
+  10749: "Cinema de Gênero",
+  878: "Ficção científica",
+  10752: "Cinema TV",
+  53: "Thriller",
+  10752: "Guerra",
+  37: "Faroeste"
+}
 
-const optionsGenre = {
-  method: 'GET',
-  headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYWZmMWI2MzFiYTlmYmUxYjRjMjViZjE4NGMzZjZjNSIsInN1YiI6IjY1MjU0OGY3ODNlZTY3MDBlNDM4Y2EwMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EUdv7UmIwtjWTM9FxR6k32rqLMMx1kmCeGXtj1ynfkQ'
-  }
-};
+function getGenresString(genreIds) {
+  const genreNames = genreIds.map(genreId => genreMap[genreId]);
+  return genreNames.join(', ');
+}
 
-fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', optionsGenre)
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(err => console.error(err));
