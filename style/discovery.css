@@ -68,6 +68,7 @@ nav {
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Slab', serif;
     color: white;
+
 }
 
 #meuCarrossel {
@@ -99,6 +100,13 @@ nav {
     font-weight: 800;
     padding-bottom: 0.3rem;
     bottom: 0;
+
+    /* Estilize o título do filme */
+    color: #333; /* Cor do texto para o título, escolha a cor desejada */
+    font-size: 24px; /* Tamanho da fonte para o título, ajuste conforme necessário */
+    font-weight: bold; /* Peso da fonte para o título, ajuste conforme necessário */
+
+
   }
 
   .banner-descricao{
@@ -107,4 +115,21 @@ nav {
     font-size: 0.8rem;
     max-width: 360px;
     height: 180px;
+
+    color: #777; /* Cor do texto para a descrição, escolha a cor desejada */
+    font-size: 18px; /* Tamanho da fonte para a descrição, ajuste conforme necessário */
   }
+
+  body{
+    height: 90vh;
+    overflow: hidden;
+  }
+
+  
+  /* Estilize o gênero do filme */
+  p {
+    color: #555; /* Cor do texto para o gênero, escolha a cor desejada */
+    font-size: 16px; /* Tamanho da fonte para o gênero, ajuste conforme necessário */
+  }
+  
+  
